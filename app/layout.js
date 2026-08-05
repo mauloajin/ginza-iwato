@@ -16,7 +16,8 @@ export const metadata = {
     locale: "ja_JP",
     type: "website"
   },
-  twitter: { card: "summary", title: "日本料理 銀座岩戸", description: "銀座一丁目の海鮮定食ランチと和食居酒屋ディナー" }
+  twitter: { card: "summary", title: "日本料理 銀座岩戸", description: "銀座一丁目の海鮮定食ランチと和食居酒屋ディナー" },
+  verification: { google: "ayHXvvh7MAYyEd0yabm5xYrI98qeN_1bfcLkvUPkbrM" }
 };
 
 export default function RootLayout({ children }) {
