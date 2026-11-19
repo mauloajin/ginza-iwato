@@ -10,7 +10,7 @@ const store = {
 };
 
 const menu = [
-  ["元祖マグロ胡麻だれ重", "岩戸秘伝の胡麻だれでマグロを和えた、ランチの定番。豚汁付き。"],
+  ["元祖マグロ胡麻だれ重", "岩戸秘伝の胡麻だれでマグロを和えた、ランチの定番。豚汁付きのセットもご用意しています。"],
   ["いわしの薄造り", "いわしを薄造りにし、ポン酢で味わう魚料理。"],
   ["刺身・季節の魚料理", "刺身、焼物、煮物、揚物など、魚を中心とした夜の一品料理。"],
   ["日本酒・焼酎", "魚料理と合わせて楽しめる日本酒、焼酎、ワインを用意。"]
@@ -21,7 +21,7 @@ const faqs = [
   ["営業時間と定休日は？", "月〜金は11:00〜14:30、17:00〜23:00です。土曜日は11:00〜14:30、17:00〜21:00です。日曜日・祝日は定休日です。"],
   ["ランチの予約はできますか？", "ランチタイムの予約は受け付けていません。ディナーは予約できます。"],
   ["どのような料理がありますか？", "ランチは元祖マグロ胡麻だれ重などの海鮮定食、ディナーは刺身、焼物、煮物、揚物などの魚料理を中心に提供しています。"],
-  ["支払い方法は？", "クレジットカード、交通系電子マネー、iD、PayPay、d払いに対応しています。ランチタイムも食券機でキャッシュレス決済を利用できます。"],
+  ["支払い方法は？", "クレジットカード、交通系電子マネー、iD、QUICPay、PayPay、d払い、楽天ペイに対応しています。ランチタイムも食券機でキャッシュレス決済を利用できます。"],
   ["個室や駐車場はありますか？", "完全個室と専用駐車場はありません。店内は全席禁煙です。"],
   ["Where is Ginza Iwato?", "It is at 1-5-1 Ginza, Chuo-ku, Tokyo, about a three-minute walk from Ginza-itchome Station."],
   ["Can I reserve lunch?", "Lunch reservations are not accepted. Dinner reservations are available through the reservation link or by phone."],
@@ -66,11 +66,11 @@ export default function Home() {
       <nav><a className="brand" href="#top">銀座 岩戸</a><div><a href="#features">特徴</a><a href="#menu">料理</a><a href="#info">店舗情報</a><a href="#access">アクセス</a><a href="#faq">FAQ</a><a href="#english">English</a></div></nav>
       <div className="heroInner" id="top">
         <p className="kicker">GINZA 1-CHOME · JAPANESE SEAFOOD</p>
-        <div className="seal">岩戸</div>
+        <div className="seal">銀座一丁目<br />昼と夜の日本料理</div>
         <h1><span>日本料理</span>銀座岩戸</h1>
         <p className="roman">GINZA IWATO</p>
         <p className="lead">昼は元祖マグロ胡麻だれ重をはじめとする海鮮定食。夜は刺身や季節の魚料理に、日本酒と焼酎を合わせる銀座一丁目の日本料理店です。</p>
-        <div className="actions"><a className="primary" href={store.reserve}>ディナー予約・詳細</a><a className="ghost" href={store.maps}>Googleマップ</a></div>
+        <div className="actions"><a className="primary" href={store.reserve}>ディナー予約・詳細</a><a className="ghost" href="tel:0335643835">電話で問い合わせ</a></div>
         <div className="quick"><span><b>11:00</b>ランチ開店</span><span><b>徒歩3分</b>銀座一丁目駅</span><span><b>日・祝</b>定休日</span></div>
       </div>
     </header>
@@ -80,16 +80,19 @@ export default function Home() {
         <article><b>夜</b><h3>魚料理の和食居酒屋</h3><p>刺身、焼物、煮物、揚物など、その日の魚と季節を映す一品料理。日本酒、焼酎、ワインとともに楽しめます。</p></article>
         <article><b>銀座</b><h3>三駅から徒歩圏</h3><p>銀座一丁目駅から徒歩3分、有楽町駅から徒歩4分、銀座駅から徒歩5分。銀座1丁目、並木通り近くです。</p></article>
       </div></section>
-      <section className="dark" id="menu"><p className="sectionNo">02 / FOOD & DRINK</p><h2>料理・お飲み物</h2><div className="menuList">{menu.map(([name, note], i) => <article key={name}><span>0{i + 1}</span><div><h3>{name}</h3><p>{note}</p></div></article>)}</div><p className="notice">仕入れや季節により内容・価格が変わります。最新情報は店舗へご確認ください。</p></section>
+      <section className="dark" id="menu"><p className="sectionNo">02 / FOOD & DRINK</p><h2>魚を味わう、<br />岩戸のひと皿。</h2><p className="sectionIntro">昼は胡麻だれ重と豚汁。夜は魚料理と一献。<br />それぞれの時間に合わせて、お楽しみください。</p><div className="gallery"><figure><img src="/images/lunch.jpg" alt="銀座岩戸のまぐろ胡麻だれ重と豚汁の海鮮ランチ" width="640" height="470" loading="lazy" /><figcaption>元祖マグロ胡麻だれ重と豚汁</figcaption></figure><figure><img src="/images/sardine.jpg" alt="日本料理 銀座岩戸のイワシ薄造り" width="640" height="640" loading="lazy" /><figcaption>イワシの薄造り</figcaption></figure></div><div className="menuList">{menu.map(([name, note], i) => <article key={name}><span>0{i + 1}</span><div><h3>{name}</h3><p>{note}</p></div></article>)}</div><p className="notice">仕入れや季節により内容・価格が変わります。最新情報は店舗へご確認ください。</p></section>
+      <section className="spaceSection" id="space"><div><p className="sectionNo">SPACE / 店内</p><h2>銀座の時間を、<br />ゆっくりと。</h2><p>木のカウンターとテーブル席を備えた店内。お食事にも、お酒と料理を楽しむひとときにも。</p><p>全34席。店内は全席禁煙です。完全個室はありません。貸切のご利用は店舗へご相談ください。</p></div><figure><img src="/images/interior.jpg" alt="銀座岩戸の木のカウンターとテーブル席" width="640" height="427" loading="lazy" /><figcaption>カウンターとテーブル席のある店内</figcaption></figure></section>
+      <section className="reservationSection" id="reservation"><p className="sectionNo">RESERVATION</p><h2>夜のお席のご案内</h2><p>ディナーのご予約は食べログ、またはお電話にて承ります。<br />ランチタイムの予約は受け付けていません。</p><div className="actions"><a className="primary" href={store.reserve}>ディナー予約・詳細</a><a className="ghost" href="tel:0335643835">03-3564-3835</a></div></section>
       <section id="info"><p className="sectionNo">03 / INFORMATION</p><h2>店舗基本情報</h2><dl className="info">
         <div><dt>正式店名</dt><dd>{store.name}<small>{store.romanized}</small></dd></div><div><dt>業態</dt><dd>海鮮・日本料理・居酒屋</dd></div><div><dt>住所</dt><dd>{store.address}</dd></div><div><dt>電話番号</dt><dd><a href="tel:0335643835">{store.phone}</a></dd></div>
         <div><dt>営業時間</dt><dd><p><b>月〜金</b>11:00〜14:30（L.O. 14:00）<br />17:00〜23:00（料理 L.O. 21:45／ドリンク L.O. 22:15）</p><p><b>土</b>11:00〜14:30（L.O. 14:00）<br />17:00〜21:00（料理 L.O. 19:45／ドリンク L.O. 20:15）</p></dd></div>
-        <div><dt>定休日</dt><dd>日曜日・祝日</dd></div><div><dt>予約</dt><dd>ディナー予約可。ランチタイムは予約不可。</dd></div><div><dt>席</dt><dd>34席（カウンター、テーブル、座敷、掘りごたつ）。完全個室なし。貸切は要相談。</dd></div><div><dt>喫煙</dt><dd>全席禁煙</dd></div><div><dt>駐車場</dt><dd>専用駐車場なし</dd></div><div><dt>支払い</dt><dd>クレジットカード、交通系電子マネー、iD、PayPay、d払い</dd></div><div><dt>ディナーのお通し</dt><dd>550円（税込）</dd></div>
+        <div><dt>定休日</dt><dd>日曜日・祝日</dd></div><div><dt>予約</dt><dd>ディナー予約可。ランチタイムは予約不可。</dd></div><div><dt>席</dt><dd>34席（カウンター、テーブル、座敷、掘りごたつ）。完全個室なし。貸切は要相談。</dd></div><div><dt>喫煙</dt><dd>全席禁煙</dd></div><div><dt>駐車場</dt><dd>専用駐車場なし</dd></div><div><dt>支払い</dt><dd>クレジットカード、交通系電子マネー、iD、QUICPay、PayPay、d払い、楽天ペイ</dd></div><div><dt>ディナーのお通し</dt><dd>600円（税込）</dd></div>
       </dl></section>
-      <section className="access" id="access"><div><p className="sectionNo">04 / ACCESS</p><h2>銀座一丁目駅から、<br />徒歩3分。</h2><p className="address">〒104-0061<br />{store.address}</p><p>東京メトロ有楽町線 銀座一丁目駅から徒歩3分<br />JR・東京メトロ 有楽町駅から徒歩4分<br />東京メトロ 銀座駅から徒歩5分</p><a className="primary" href={store.maps}>Googleマップで道順を見る</a></div><div className="mapArt"><small>TOKYO · CHUO</small><strong>銀座<br /><em>一丁目</em></strong><span>1—5—1</span></div></section>
+      <section className="access" id="access"><div><p className="sectionNo">04 / ACCESS</p><h2>銀座一丁目駅から、<br />徒歩3分。</h2><p className="address">〒104-0061<br />{store.address}</p><p>東京メトロ有楽町線 銀座一丁目駅から徒歩3分<br />JR・東京メトロ 有楽町駅から徒歩4分<br />東京メトロ 銀座駅から徒歩5分</p><a className="primary" href={store.maps}>Googleマップで道順を見る</a></div><figure className="entrance"><img src="/images/entrance.jpg" alt="東京都中央区銀座1-5-1にある銀座岩戸の店先" width="450" height="313" loading="lazy" /><figcaption>銀座一丁目、岩戸の店先</figcaption></figure></section>
+      <section className="english" id="english"><p className="sectionNo">06 / ENGLISH GUIDE</p><h2>Japanese dining,<br />in Ginza.</h2><p className="lead">Ginza Iwato is a Japanese seafood restaurant in Ginza 1-chome, central Tokyo. At lunch, it serves seafood set meals including its original tuna rice bowl dressed with sesame sauce. Dinner features sashimi and seasonal grilled, simmered and fried fish dishes with sake and shochu.</p><dl className="englishInfo"><div><dt>Type</dt><dd>Japanese cuisine / seafood / izakaya</dd></div><div><dt>Address</dt><dd>1-5-1 Ginza, Chuo-ku, Tokyo 104-0061</dd></div><div><dt>Hours</dt><dd>Mon–Fri 11:00 a.m.–2:30 p.m. / 5:00 p.m.–11:00 p.m.<br />Sat 11:00 a.m.–2:30 p.m. / 5:00 p.m.–9:00 p.m.</dd></div><div><dt>Last orders</dt><dd>Lunch 2:00 p.m.<br />Weekday dinner: food 9:45 p.m. / drinks 10:15 p.m.<br />Saturday dinner: food 7:45 p.m. / drinks 8:15 p.m.</dd></div><div><dt>Closed</dt><dd>Sundays and public holidays</dd></div><div><dt>Reservation</dt><dd>Dinner reservations are available. Lunch reservations are not accepted.</dd></div><div><dt>Access</dt><dd>3 minutes from Ginza-itchome Station; 4 minutes from Yurakucho Station; 5 minutes from Ginza Station.</dd></div></dl><div className="actions"><a className="primary" href={store.reserve}>Reservation & details</a><a className="ghost darkGhost" href={store.maps}>Open Google Maps</a></div></section>
       <section id="faq"><p className="sectionNo">05 / FAQ</p><h2>よくある質問</h2><div className="faq">{faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
-      <section className="english" id="english"><p className="sectionNo">06 / ENGLISH GUIDE</p><h2>Ginza Iwato</h2><p className="lead">Ginza Iwato is a Japanese seafood restaurant in Ginza 1-chome, central Tokyo. At lunch, it serves seafood set meals including its original tuna rice bowl dressed with sesame sauce. Dinner features sashimi and seasonal grilled, simmered and fried fish dishes with sake and shochu.</p><dl className="englishInfo"><div><dt>Type</dt><dd>Japanese cuisine / seafood / izakaya</dd></div><div><dt>Address</dt><dd>1-5-1 Ginza, Chuo-ku, Tokyo 104-0061</dd></div><div><dt>Hours</dt><dd>Mon–Fri 11:00 a.m.–2:30 p.m. / 5:00 p.m.–11:00 p.m.<br />Sat 11:00 a.m.–2:30 p.m. / 5:00 p.m.–9:00 p.m.</dd></div><div><dt>Closed</dt><dd>Sundays and public holidays</dd></div><div><dt>Reservation</dt><dd>Dinner reservations are available. Lunch reservations are not accepted.</dd></div><div><dt>Access</dt><dd>3 minutes from Ginza-itchome Station; 4 minutes from Yurakucho Station; 5 minutes from Ginza Station.</dd></div></dl><div className="actions"><a className="primary" href={store.reserve}>Reservation & details</a><a className="ghost darkGhost" href={store.maps}>Open Google Maps</a></div></section>
       <section className="links"><p className="sectionNo">07 / LINKS</p><h2>店舗リンク</h2><div className="linkGrid"><a href={store.instagram}>公式 Instagram <span>↗</span></a><a href={store.reserve}>食べログ・ディナー予約 <span>↗</span></a><a href={store.maps}>Googleマップ <span>↗</span></a><a href="https://www.hotpepper.jp/strJ000116680/">ホットペッパーグルメ <span>↗</span></a></div></section>
+      <section className="sakeSection"><figure><img src="/images/sake.jpg" alt="銀座岩戸の店内に並ぶ日本酒" width="480" height="640" loading="lazy" /></figure><div><p className="sectionNo">GINZA IWATO</p><h2>魚料理と、<br />一杯の日本酒。</h2><p>昼のお食事から、夜の一献まで。<br />銀座一丁目でお待ちしております。</p><div className="actions"><a className="primary" href={store.reserve}>ディナー予約・詳細</a><a className="ghost" href="tel:0335643835">電話する</a></div></div></section>
       <section className="keywords"><details><summary>銀座岩戸に関連する検索語 / Related searches</summary><div><h3>日本語</h3><p>{jpKeywords.join(" / ")}</p><h3>English</h3><p lang="en">{enKeywords.join(" / ")}</p></div></details></section>
     </main>
     <footer><div><strong>日本料理 銀座岩戸</strong><p>{store.address}<br /><a href="tel:0335643835">{store.phone}</a></p></div><div className="footerLinks"><a href={store.reserve}>予約</a><a href={store.maps}>地図</a><a href={store.instagram}>Instagram</a></div><small>Ginza Iwato — Japanese seafood restaurant in Ginza, Tokyo</small></footer>
